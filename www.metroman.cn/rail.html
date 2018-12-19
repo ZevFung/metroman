@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="地铁通,metroman,地铁图,线路图,路线图,地铁线路图,地铁路线图,北京地铁,上海地铁,广州地铁,深圳地铁,香港地铁,台北地铁,高雄地铁,南京地铁,天津地铁,重庆地铁,成都地铁,武汉地铁,杭州地铁,西安地铁,苏州地铁,沈阳地铁,长春地铁,哈尔滨地铁,大连地铁,昆明地铁,长沙地铁,宁波地铁,无锡地铁,郑州地铁,南昌地铁,青岛地铁,东莞地铁,南宁地铁,福州地铁,合肥地铁,石家庄地铁,港铁,台北捷运">
+    <meta name="description" content="地铁通-MetroMan 为您提供中国城市轨道交通线路图。">
+    <link rel="stylesheet" href="../cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" tppabs="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="icon" href="image/favicon.ico.png" tppabs="http://www.metroman.cn/image/favicon.ico">
+    <title>高铁图-MetroMan</title>
+    <script type="text/javascript" src="library/openseadragon-bin-2.2.1/openseadragon.min.js" tppabs="http://www.metroman.cn/library/openseadragon-bin-2.2.1/openseadragon.min.js"></script>
+    <script type="text/javascript">
+        function addEvent(object, type, callback) {
+            if (object == null || typeof (object) == 'undefined') return;
+            if (object.addEventListener) {
+                object.addEventListener(type, callback, false);
+            } else if (object.attachEvent) {
+                object.attachEvent("on" + type, callback);
+            } else {
+                object["on" + type] = callback;
+            }
+        }
+        function resizeRail() {
+            var navHeight = document.getElementById('navDiv').offsetHeight;
+            var divWidth = window.innerWidth;
+            var divHeight = window.innerHeight - navHeight;
+            document.getElementById('railDiv').setAttribute("style", "width:" + divWidth + "px");
+            document.getElementById('railDiv').setAttribute("style", "height:" + divHeight + "px");
+        }
+        function initRail() {
+            addEvent(window, "resize", function (event) { resizeRail(); });
+            resizeRail();
+            OpenSeadragon({
+                id: "railDiv",
+                prefixUrl: "library/openseadragon-bin-2.2.1/images/",
+                tileSources: {
+                    Image: {
+                        xmlns: "http://schemas.microsoft.com/deepzoom/2009",
+                        Url: "image/rail/",
+                        Overlap: "1",
+                        TileSize: "256",
+                        Format: "png",
+                        Size: {
+                            Width: "7000",
+                            Height: "6900"
+                        }
+                    }
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <nav id="navDiv" class="navbar navbar-default navbar-static-top" style="margin-bottom:0px;">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html" tppabs="http://www.metroman.cn/index.html">地铁通-MetroMan</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html" tppabs="http://www.metroman.cn/index.html">地铁通</a></li>
+                    <li>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">线路图 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+<li><a href="metro.html-city=bj.htm" tppabs="http://www.metroman.cn/metro.html?city=bj">北京</a></li>
+<li><a href="metro.html-city=sh.htm" tppabs="http://www.metroman.cn/metro.html?city=sh">上海</a></li>
+<li><a href="metro.html-city=gz.htm" tppabs="http://www.metroman.cn/metro.html?city=gz">广州</a></li>
+<li><a href="metro.html-city=sz.htm" tppabs="http://www.metroman.cn/metro.html?city=sz">深圳</a></li>
+<li><a href="metro.html-city=hk.htm" tppabs="http://www.metroman.cn/metro.html?city=hk">香港</a></li>
+<li><a href="metro.html-city=tb.htm" tppabs="http://www.metroman.cn/metro.html?city=tb">台北</a></li>
+<li role="separator" class="divider"></li>
+<li><a href="metro.html-city=nj.htm" tppabs="http://www.metroman.cn/metro.html?city=nj">南京</a></li>
+<li><a href="metro.html-city=cq.htm" tppabs="http://www.metroman.cn/metro.html?city=cq">重庆</a></li>
+<li><a href="metro.html-city=wh.htm" tppabs="http://www.metroman.cn/metro.html?city=wh">武汉</a></li>
+<li><a href="metro.html-city=cd.htm" tppabs="http://www.metroman.cn/metro.html?city=cd">成都</a></li>
+<li><a href="metro.html-city=tj.htm" tppabs="http://www.metroman.cn/metro.html?city=tj">天津</a></li>
+<li><a href="metro.html-city=dl.htm" tppabs="http://www.metroman.cn/metro.html?city=dl">大连</a></li>
+<li><a href="metro.html-city=su.htm" tppabs="http://www.metroman.cn/metro.html?city=su">苏州</a></li>
+<li><a href="metro.html-city=hz.htm" tppabs="http://www.metroman.cn/metro.html?city=hz">杭州</a></li>
+<li><a href="metro.html-city=zz.htm" tppabs="http://www.metroman.cn/metro.html?city=zz">郑州</a></li>
+<li><a href="metro.html-city=xa.htm" tppabs="http://www.metroman.cn/metro.html?city=xa">西安</a></li>
+<li role="separator" class="divider"></li>
+<li><a href="metro.html-city=km.htm" tppabs="http://www.metroman.cn/metro.html?city=km">昆明</a></li>
+<li><a href="metro.html-city=nb.htm" tppabs="http://www.metroman.cn/metro.html?city=nb">宁波</a></li>
+<li><a href="metro.html-city=cs.htm" tppabs="http://www.metroman.cn/metro.html?city=cs">长沙</a></li>
+<li><a href="metro.html-city=cc.htm" tppabs="http://www.metroman.cn/metro.html?city=cc">长春</a></li>
+<li><a href="metro.html-city=hf.htm" tppabs="http://www.metroman.cn/metro.html?city=hf">合肥</a></li>
+<li><a href="metro.html-city=wx.htm" tppabs="http://www.metroman.cn/metro.html?city=wx">无锡</a></li>
+<li><a href="metro.html-city=sy.htm" tppabs="http://www.metroman.cn/metro.html?city=sy">沈阳</a></li>
+<li><a href="metro.html-city=nn.htm" tppabs="http://www.metroman.cn/metro.html?city=nn">南宁</a></li>
+<li><a href="metro.html-city=nc.htm" tppabs="http://www.metroman.cn/metro.html?city=nc">南昌</a></li>
+<li><a href="metro.html-city=qd.htm" tppabs="http://www.metroman.cn/metro.html?city=qd">青岛</a></li>
+<li><a href="metro.html-city=gx.htm" tppabs="http://www.metroman.cn/metro.html?city=gx">高雄</a></li>
+<li><a href="metro.html-city=dg.htm" tppabs="http://www.metroman.cn/metro.html?city=dg">东莞</a></li>
+<li><a href="metro.html-city=sj.htm" tppabs="http://www.metroman.cn/metro.html?city=sj">石家庄</a></li>
+<li><a href="metro.html-city=xm.htm" tppabs="http://www.metroman.cn/metro.html?city=xm">厦门</a></li>
+<li><a href="metro.html-city=fz.htm" tppabs="http://www.metroman.cn/metro.html?city=fz">福州</a></li>
+<li><a href="metro.html-city=hb.htm" tppabs="http://www.metroman.cn/metro.html?city=hb">哈尔滨</a></li>
+<li><a href="metro.html-city=gy.htm" tppabs="http://www.metroman.cn/metro.html?city=gy">贵阳</a></li>
+<li><a href="metro.html-city=wl.htm" tppabs="http://www.metroman.cn/metro.html?city=wl">乌鲁木齐</a></li>
+                        </ul>
+                    </li>
+                    <li class="active dropdown"><a href="rail.html" tppabs="http://www.metroman.cn/rail.html">高铁图</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="javascript:if(confirm(%27http://a.app.qq.com/o/simple.jsp?pkgname=com.xinlukou.metroman  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://a.app.qq.com/o/simple.jsp?pkgname=com.xinlukou.metroman%27" tppabs="http://a.app.qq.com/o/simple.jsp?pkgname=com.xinlukou.metroman" target="_blank">App下载</a></li>
+                    <li><a href="mailto:metromancn@gmail.com">联系我们</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="railDiv" style="margin-left:auto;margin-right:auto;">
+        <script type="text/javascript">
+            initRail();
+        </script>
+    </div>
+    <script src="../cdn.bootcss.com/jquery/1.12.4/jquery.min.js" tppabs="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" tppabs="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
